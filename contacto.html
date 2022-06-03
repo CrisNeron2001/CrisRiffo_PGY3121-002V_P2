@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChileAlerta</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+</head>
+  <body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #0000e1;">
+            <a class="navbar-brand font-weight-bold" href="index.html">Alerta Chile</a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation"></button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Inicio<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="sistema_alerta.html">Sistema Alerta<span class="sr-only">(current)</span></a>
+                    </li>       
+                    <li class="nav-item active">
+                        <a class="nav-link" href="contacto.html">Contacto<span class="sr-only">(current)</span></a>
+                    </li>     
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <div class="d-flex justify-content-center">
+            <h1>
+                Contáctanos
+            </h1>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3">
+                    <form id="form1" name="form1" action="#">
+                        <fieldset>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="nombre">Ingrese su nombre:</label>
+                                    <input type="text" class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="Ej.: Pedro">
+                                    <small id="helpId" class="form-text text-muted">Debe ingresar su primer nombre</small>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="apellido">Ingrese su apellido:</label>
+                                    <input type="text" class="form-control" name="apellido" id="apellido" aria-describedby="helpId" placeholder="Ej.: Muñoz">
+                                    <small id="helpId" class="form-text text-muted">Debe ingresar su apellido paterno</small>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label for="correo">Ingrese su correo:</label>
+                                    <input type="email" class="form-control" name="correo" id="correo" aria-describedby="emailHelpId" placeholder="Ej.: ejemplo@gmail.com">
+                                    <small id="emailHelpId" class="form-text text-muted">Debe ingresar su correo electrónico</small>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label for="numero">Ingrese su número telefonico:</label>
+                                    <input type="text" class="form-control" name="numero" id="numero" aria-describedby="helpId" placeholder="Ej.: +56 (9) XXXX XXXX">
+                                    <small id="helpId" class="form-text text-muted">Debe ingresar su número telefonico</small>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label for="region">Ingrese su region:</label>
+                                    <select class="form-control" id="region">
+                                        <option value="0">Seleccione una region</option>
+                                    </select>
+                                    <small id="helpId" class="text-muted">Debe ingresar el nombre de la region</small>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label for="provincia">Ingrese su provincia:</label>
+                                    <select class="form-control" id="provincia">
+                                        <option value="0">Seleccione una provincia</option>
+                                    </select>
+                                    <small id="helpId" class="form-text text-muted">Debe ingresar el nombre de la provincia</small>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label for="comuna">Ingresa su comuna:</label>
+                                    <select class="form-control" id="comuna">
+                                        <option value="0">Seleccione una comuna</option>
+                                    </select>
+                                    <small id="helpId" class="form-text text-muted">Debe ingresar el nombre de la comuna</small>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-12 shadow-textarea">
+                                    <label for="mensaje">Mensaje:</label>
+                                    <textarea class="form-control z-depth-1" id="mensaje" rows="3" placeholder="Escribe Aquí..."></textarea>
+                                </div>
+                            </div>    
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <button onclick="" type="submit" id="enviar" class="btn-primary">Enviar</button>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <button onclick="" type="reset" id="limpiar" class="btn-danger">Limpiar</button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+             </div>
+        </div>
+    </div>
+    </section>
+    <script>
+        $(document).ready(function(){
+            $.get("https://apps.gasco.cl/v1/locationService/regions/getAllRegions/",
+            function(data){
+                $.each(data.data, function(i, {id, name, ordinal}){
+                    $("#region").append('<option value="'+id+'">'+name+' ('+ordinal+')</option>');
+                })
+            })
+        })
+        var ep_region = "https://apps.gasco.cl/v1/locationService/provinces/byRegionId/"
+
+    $('#region').change(function() {
+        var s_region = $('#region').val();
+        $.get(ep_region+s_region+"/",
+        function(data){
+            $("#provincia").empty().append(new Option("Seleccione una provincia.", 0));
+            $("#comuna").empty().append(new Option("Seleccione una comuna.", 0));;
+
+            $.each(data.data, function(i, {id, name, regionId}){
+                $("#provincia").append(new Option(name, id));
+            })
+        }) 
+    })
+    $('#provincia').change(function() {
+            var s_prov = $('#provincia').val();
+            var endpoint = "https://apps.gasco.cl/v1/locationService/communes/byProvinceId/"+s_prov+"/"
+            $.get(endpoint,
+            function(data){
+                $("#comuna").empty().append(new Option("Seleccione una comuna.", 0));
+                $.each(data.data, function(i, {id, name}){
+                    $("#comuna").append(new Option(name, id));
+                })
+            }) 
+        })
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  </body>
+</html>
