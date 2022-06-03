@@ -75,7 +75,7 @@ function validarCorreo(correo){
     }
 }
 function validarTipoCorreo(correo){
-    if(correo == '@gmail' || correo == '@duocuc.cl' || correo == '@profesor.duoc.cl'){
+    if(correo == '@gmail.com' || correo == '@duocuc.cl' || correo == '@profesor.duoc.cl'){
         return true;
     } else {
         return false;
